@@ -4,7 +4,7 @@ This is a collcetion of Shiny apps for introductory statistics courses based on 
 
 I originally developed these apps for the course [Stat 2](http://gastonsanchez.com/stat2) "Introduction to Statistics" (at UC Berkeley). The main motivation behind the apps is to have teaching materials (in the form of interactive graphics) that I can use during lecture.
 
-The apps are not specifically intended for Stat 2 onl. They can be used for any of the introductory Statistics courses at UC Berkeley: STAT 2, STAT 20, and STAT 21. And pretty much in any statistics introductory course in general.
+The apps are not specifically intended for Stat 2 only. They can be used for any of the introductory Statistics courses at UC Berkeley: STAT 2, STAT 20, and STAT 21. And pretty much in any statistics introductory course in general.
 
 
 ## Running the apps

@@ -41,15 +41,15 @@ shinyServer(function(input, output) {
       plot(num_tosses, difference, 
            col = '#627fe2', type = 'l', lwd = 3,
            xlab = "Number of tosses",
-           ylab = y_lab,
-           axes = FALSE)
+           ylab = '# of heads - 1/2 # of tosses',
+           axes = FALSE, main = 'Chance Error')
       abline(h = 0, col = '#888888aa', lwd = 3)
     } else {
       plot(num_tosses, proportion, ylim = c(0, 1),
            col = '#627fe2', type = 'l', lwd = 3,
            xlab = 'Number of tosses',
            ylab = 'Proportion of heads',
-           axes = FALSE)
+           axes = FALSE, main = 'Percent Error')
       abline(h = 0.5, col = '#888888aa', lwd = 3)
     }
     axis(side = 1)

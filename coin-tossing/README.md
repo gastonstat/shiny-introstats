@@ -17,7 +17,10 @@ The data simulates tossing a coin using the random binomial generator function `
 
 ## Plot
 
-The displayed plot shows the chance error (i.e. number of heads minus half the number of tosses) on the y-axis, and the number of tosses on the x-axis.
+There are two options to displayed the plot: 
+
+1. shows the chance error (i.e. number of heads minus half the number of tosses) on the y-axis, and the number of tosses on the x-axis.
+2. shows the percent error (i.e. proportion of heads) on the y-axis, and the number of tosses on the x-axis.
 
 
 ## How to run it?

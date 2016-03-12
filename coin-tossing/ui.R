@@ -15,10 +15,14 @@ shinyUI(
       
       # Define the sidebar with one input
       sidebarPanel(
-        numericInput("seed", "Random Seed:", 12345, 
+        numericInput("seed", label = "Random Seed:", 12345, 
                      min = 10000, max = 50000, step = 1),
-        sliderInput("tosses", "Number of tosses:", 
-                    min = 100, max = 10000, value = 1000, step= 100),
+        sliderInput("tosses", label = "Number of tosses:", 
+                    min = 100, max = 10000, value = 100, step= 100),
+        radioButtons("error", label = "Display",
+                     choices = list("Chance error" = 1, 
+                                    "Percent error" = 2), 
+                     selected = 1),
         hr(),
         helpText('Total number of heads:'),
         verbatimTextOutput("num_heads"),

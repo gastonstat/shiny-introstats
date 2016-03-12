@@ -25,15 +25,34 @@ shinyServer(function(input, output) {
     tosses <- input$tosses
     flips <- rbinom(n = tosses, 1, prob = 0.5)
     num_heads <- cumsum(flips)
+    prop_heads <- (num_heads / 1:tosses)
     num_tosses <- seq(1, tosses, by = 100)
+    if (tosses <= 200) {
+      num_tosses <- seq(2, tosses, by = 2)
+    } else if (tosses < 1000) {
+      num_tosses <- seq(2, tosses, by = 10)
+    } else if (tosses < 5000) {
+      num_tosses <- seq(2, tosses, by = 50)
+    }
     # Render a barplot
     difference <- num_heads[num_tosses] - (num_tosses / 2)
-    plot(num_tosses, difference, type = 'l', lwd = 2,
-         xlab = "Number of tosses",
-         ylab = '# heads - half # of tosses',
-         axes = FALSE)
+    proportion <- prop_heads[num_tosses]
+    if (input$error == 1) {
+      plot(num_tosses, difference, 
+           col = '#627fe2', type = 'l', lwd = 3,
+           xlab = "Number of tosses",
+           ylab = y_lab,
+           axes = FALSE)
+      abline(h = 0, col = '#888888aa', lwd = 3)
+    } else {
+      plot(num_tosses, proportion, ylim = c(0, 1),
+           col = '#627fe2', type = 'l', lwd = 3,
+           xlab = 'Number of tosses',
+           ylab = 'Proportion of heads',
+           axes = FALSE)
+      abline(h = 0.5, col = '#888888aa', lwd = 3)
+    }
     axis(side = 1)
     axis(side = 2, las = 1)
-    abline(h = 0, col = 'gray50')
   })
 })

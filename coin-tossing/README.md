@@ -1,6 +1,6 @@
 # Coin Tossing
 
-This is a Shiny app that the chance error when simulating tossing a coin a given number of times.
+This is a Shiny app that illustrates the concept of chance error when simulating tossing a coin a given number of times.
 
 
 ## Motivation

@@ -1,4 +1,4 @@
-# Rolling Dice
+# Rolling Dice: Sum of Points
 
 This is a Shiny app that generates empirical histograms when simulating 
 rolling a pair of dice and finding the total number of spots.
@@ -32,7 +32,7 @@ There are many ways to download the app and run it:
 library(shiny)
 
 # Easiest way is to use runGitHub
-runGitHub("shiny-introstats", "gastonstat", subdir = "roll-dice")
+runGitHub("shiny-introstats", "gastonstat", subdir = "roll-dice-sum")
 ```
 
 Or you can [clone](http://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder) the git repository, then use `runApp()`:
@@ -40,6 +40,6 @@ Or you can [clone](http://stackoverflow.com/questions/651038/how-do-you-clone-a-
 ```R
 # First clone the repository with git. If you have cloned it into
 # ~/shiny-introstats, first go to that directory, then use runApp().
-setwd("~/shiny-introstats/roll-dice")
+setwd("~/shiny-introstats/roll-dice-sum")
 runApp()
 ```

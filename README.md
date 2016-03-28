@@ -9,7 +9,7 @@ The apps are not specifically intended for Stat 2 only. They can be used for any
 
 ## Running the apps
 
-The easiest way to run an app is with the `runGitHub()` from `"shiny"` package. For instance, to run the app contained in the `regression-galton` folder, run the following in R:
+The easiest way to run an app is with the `runGitHub()` from `"shiny"` package. For instance, to run the app contained in the [regression-galton](/regression-galton) folder, run the following code in R:
 
 ```R
 library(shiny)

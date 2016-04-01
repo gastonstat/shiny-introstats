@@ -11,7 +11,7 @@ shinyServer(function(input, output) {
     total_points <- sapply(rep(input$dice, input$reps), sum_rolls)
     # put in relative terms
     prop_points <- 100 * table(total_points) / input$reps
-    ymax <- find_ymax(max(prop_points), 5)
+    ymax <- find_ymax(max(prop_points), 2)
     # Render a barplot
     barplot(prop_points, las = 1, border = "gray40",
             space = 0, ylim = c(0, ymax),

@@ -31,9 +31,9 @@ is_multiple <- function(x, num) {
 # find the y-max value for ylim in barplot()
 find_ymax <- function(x, num) {
   if (is_multiple(x, num)) {
-    return(max(prop_points))
+    return(max(x))
   } else {
-    return(ymax <- num * ((x %/% num) + 1))
+    return(num * ((x %/% num) + 1))
   }
 }
 

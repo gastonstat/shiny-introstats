@@ -3,20 +3,29 @@ library(shiny)
 # Define a server for the Shiny app
 shinyServer(function(input, output) {
 
+  seed <- reactive({
+    input$seed
+  })
+  tosses <- reactive({
+    input$tosses
+  })
+  
   # Proportion of heads
   output$num_heads <- renderPrint({ 
-    set.seed(input$seed)
-    tosses <- input$tosses
-    flips <- rbinom(n = tosses, 1, prob = 0.5)
+    #set.seed(input$seed)
+    #tosses <- input$tosses
+    set.seed(seed())
+    flips <- rbinom(n = tosses(), 1, prob = 0.5)
     sum(flips)
   })
 
     # Proportion of heads
   output$prop_heads <- renderPrint({ 
-    set.seed(input$seed)
-    tosses <- input$tosses
-    flips <- rbinom(n = tosses, 1, prob = 0.5)
-    round(100 * sum(flips) / input$tosses, 2)
+    #set.seed(input$seed)
+    #tosses <- input$tosses
+    set.seed(seed())
+    flips <- rbinom(n = tosses(), 1, prob = 0.5)
+    round(100 * sum(flips) / tosses(), 2)
   })
   
   # Fill in the spot we created for a plot

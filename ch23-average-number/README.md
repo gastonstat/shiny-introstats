@@ -6,7 +6,7 @@ This is a Shiny app that illustrates the concept of accuracy of averages.
 ## Motivation
 
 The goal is to provide a visual display for the Introduction example in 
-__Statistics, Chapter 203: Accuracy of Averages__
+__Statistics, Chapter 23: Accuracy of Averages__
 
 Reference: "Statistics" by David Freedman, Robert Pisani and Roger Purves (2007). 
 Fourth Edition. Norton & Company.

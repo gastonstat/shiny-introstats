@@ -27,7 +27,6 @@ shinyUI(
         hr(),
         helpText('Number average'),
         verbatimTextOutput("num_avg"),
-        hr(),
         helpText('Percent average'),
         verbatimTextOutput("perc_avg")
       ),

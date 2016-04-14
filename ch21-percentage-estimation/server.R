@@ -1,7 +1,6 @@
-# Box with numbers [1, 2, 3, 4, 5, 6, 7], and 25 draws
-# Sampling numbers from a box
-# Chapter 23: Accuracy of Averages
-# Page 409-411
+# Box with two types of tickets [# 1's, # 0's]
+# Drawing tickets from the box
+# Chapter 21: Accuracy of Percentages
 
 library(shiny)
 

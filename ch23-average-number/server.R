@@ -79,7 +79,7 @@ shinyServer(function(input, output) {
          main = "Average of Draws")
     axis(side = 1)
     axis(side = 2, las = 1)
-    abline(v = avg_box, col = '#FF0000dd', lwd = 2.5)
+    abline(v = avg_box, col = '#0000FFdd', lwd = 2.5)
     segments(x0 = samples - se_avg,
              x1 = samples + se_avg,
              y0 = 1:length(samples),

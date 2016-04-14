@@ -65,6 +65,12 @@ shinyServer(function(input, output) {
     
     # Render plot
     samples <- sum_draws() / input$draws
+    a <- samples - se_avg
+    b <- samples + se_avg
+    covers <- (a <= avg_box & avg_box <= b)
+    ci_cols <- rep('#ff000088', input$reps)
+    ci_cols[covers] <- '#0000ff88'
+    
     xlim <- c(min(samples) - se_avg, max(samples) + se_avg)
     plot(samples, 1:length(samples), axes = FALSE,
          col = '#444444', pch = 21, cex = 0.5,
@@ -77,8 +83,8 @@ shinyServer(function(input, output) {
     segments(x0 = samples - se_avg,
              x1 = samples + se_avg,
              y0 = 1:length(samples),
-             y1 = 1:length(samples),
-             col = "#555555bb")
+             y1 = 1:length(samples),#col = "#555555bb"
+             col = ci_cols)
   })
   
 })

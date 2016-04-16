@@ -1,6 +1,7 @@
 # Homoscedastic and Heteroscedastic
 
-This is a Shiny app that generates a scatter diagram and the corresponding histogram of residuals to illustrate the regression errors, using Climbing Ropes data set.
+This is a Shiny app that generates a scatter diagram and the corresponding 
+histogram of residuals to illustrate the regression errors, using Climbing Ropes data set.
 
 
 ## Motivation
@@ -34,7 +35,7 @@ There are many ways to download the app and run it:
 library(shiny)
 
 # Easiest way is to use runGitHub
-runGitHub("shiny-introstats", "gastonstat", subdir = "regression-heteroscedastic")
+runGitHub("shiny-introstats", "gastonstat", subdir = "ch12-regression-heteroscedastic")
 ```
 
 Or you can [clone](http://stackoverflow.com/questions/651038/how-do-you-clone-a-git-repository-into-a-specific-folder) the git repository, then use `runApp()`:
@@ -42,6 +43,6 @@ Or you can [clone](http://stackoverflow.com/questions/651038/how-do-you-clone-a-
 ```R
 # First clone the repository with git. If you have cloned it into
 # ~/shiny-introstats, first go to that directory, then use runApp().
-setwd("~/shiny-introstats/regression-heteroscedastic")
+setwd("~/shiny-introstats/ch12-regression-heteroscedastic")
 runApp()
 ```

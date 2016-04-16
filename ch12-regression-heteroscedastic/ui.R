@@ -1,8 +1,11 @@
+# Scatter diagram for several variables
+# Data: Dynamic Ropes
+# Chapter 12: Regression Line
+# Page 120-127
 
 library(shiny)
 
-dat <- read.table('~/Dropbox/course_stat2/data/dynamicropes.txt',
-                  header = TRUE)
+dat <- read.table('ropes.txt', header = TRUE)
 dat <- dat[ ,-c(1,2)]
 
 # Define the overall UI

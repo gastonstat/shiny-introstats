@@ -1,3 +1,6 @@
+# Chance error when tossing a coin (based on John Kerrich's)
+# Chapter 16: The Law of Averages
+# Pages 275-278
 
 library(shiny)
 

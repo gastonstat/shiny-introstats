@@ -1,3 +1,7 @@
+# Residual Plot
+# Regression line and residual plot using 'Ropes' data
+# Chapter 11: The R.M.S. Error for Regression
+# Page 187-190
 
 library(shiny)
 

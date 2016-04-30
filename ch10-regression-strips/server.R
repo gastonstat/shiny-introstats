@@ -1,3 +1,8 @@
+# Regression Strips
+# Regression line and vertical strips
+# Chapter 10: Regression
+# Page 158-178
+
 library(shiny)
 
 dat <- read.csv('Galton.csv')

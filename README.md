@@ -1,10 +1,10 @@
-# Shiny Apps for STAT 2, 20, 21
+# Shiny Apps for STAT 2, 20, 21, 131A
 
 This is a collcetion of Shiny apps for introductory statistics courses based on the classic textbook __Statistics__ by David Freedman, Robert Pisani, and Roger Purves (2007). Fourth Edition. Norton & Company.
 
-I originally developed these apps for the course [Stat 2](http://gastonsanchez.com/stat2) "Introduction to Statistics" (at UC Berkeley). The main motivation behind the apps is to have teaching materials (in the form of interactive graphics) that I can use during lecture.
+I originally developed these apps for the course [Stat 2](http://gastonsanchez.com/stat2), and refined them for [Stat 20 / Stat 131A](https://github.com/ucb-introstat/introstat-spring-2017), at UC Berkeley. The main motivation behind the apps is to have teaching materials (in the form of interactive graphics) that I can use for living demos during lecture.
 
-The apps are not specifically intended for Stat 2 only. They can be used for any of the introductory Statistics courses at UC Berkeley: STAT 2, STAT 20, and STAT 21. And pretty much in any statistics introductory course in general.
+The apps are not specifically intended for Stat 2, 20 or 131A. They can be used for any of the introductory Statistics courses at UC Berkeley: STAT 2, STAT 20, STAT 21, STAT W21, STAT 131A, etc. And pretty much in any statistics introductory course in general.
 
 
 ## Running the apps

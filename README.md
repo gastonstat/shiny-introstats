@@ -9,7 +9,22 @@ The apps are not specifically intended for Stat 2, 20 or 131A. They can be used 
 
 ## Running the apps
 
-The easiest way to run an app is with the `runGitHub()` from `"shiny"` package. For instance, to run the app contained in the [regression-galton](/regression-galton) folder, run the following code in R:
+The required software is __[R](https://www.r-project.org/)__ and __[RStudio](https://www.rstudio.com/)__ (preferably a recent version).
+
+Both R and RStudio are free, and are available for Mac OS X, Windows, and Linux. 	
+
+- R for Mac: [https://cran.cnr.berkeley.edu/bin/macosx/](https://cran.cnr.berkeley.edu/bin/macosx/)
+- R for Windows: [https://cran.cnr.berkeley.edu/bin/windows/](https://cran.cnr.berkeley.edu/bin/windows/)
+- RStudio Desktop version [https://www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+
+Assuming that you have both R and RStudio, the other thing you need is the R package "shiny". In case of doubt, run:
+
+```R
+install.packages("shiny")
+```
+
+The easiest way to run an app is with the `runGitHub()` function from the `"shiny"` package. For instance, to run the app contained in the [regression-galton](/regression-galton) folder, run the following code in R:
 
 ```R
 library(shiny)
@@ -27,8 +42,10 @@ setwd("~/regression-galton")
 runApp()
 ```
 
+-----
 
-## Author Contact
+### License
 
-- Gaston Sanchez: [gastonsanchez.com](http://gastonsanchez.com)
-- Email: `gaston.stat at gmail.com`
+This work is licensed under a <a rel="license" href="https://opensource.org/licenses/BSD-2-Clause">FreeBSD License</a>.
+
+Author: [Gaston Sanchez](http://gastonsanchez.com)

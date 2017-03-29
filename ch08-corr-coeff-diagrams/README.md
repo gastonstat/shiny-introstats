@@ -19,6 +19,6 @@ Reference: "Statistics" by David Freedman, Robert Pisani and Roger Purves (2007)
 library(shiny)
 
 # Easiest way is to use runGitHub
-runGitHub("introstat-spring-2017", "ucb-introstat", subdir = "apps/ch08-corr-coeff-diagrams")
+runGitHub("shiny-introstats", "gastonstat", subdir = "ch08-corr-coeff-diagrams")
 ```
 

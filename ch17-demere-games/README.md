@@ -37,5 +37,5 @@ playing the game a given number of times.
 library(shiny)
 
 # Easiest way is to use runGitHub
-runGitHub("introstat-spring-2017", "ucb-introstat", subdir = "ch17-demere-games")
+runGitHub("shiny-introstats", "gastonstat", subdir = "ch17-demere-games")
 ```

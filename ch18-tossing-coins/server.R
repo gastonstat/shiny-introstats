@@ -29,7 +29,9 @@ shinyServer(function(input, output) {
     ymax <- find_ymax(max(probs), 2)
     # Render probability histogram as a barplot
     barplot(probs, las = 1, border = "gray40", 
-            ylim = c(0, ymax), ylab = "probability (%)",
+            ylim = c(0, ymax), 
+            ylab = "probability of heads (%)",
+            xlab = "number of heads",
             space = 0, names.arg = 0:input$tosses,
             main = sprintf("Probability Histogram\n %s Tosses", 
                            input$tosses))

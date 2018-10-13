@@ -19,7 +19,7 @@ shinyServer(function(input, output) {
     # Render a barplot
     barplot(prop_points, las = 1, border = "gray40",
             space = 0, ylim = c(0, ymax),
-            ylab = "probability (%)",
+            ylab = "relative frequency (%)",
             main = sprintf("%s Repetitions", input$reps))
   })
 })

@@ -20,15 +20,21 @@ shinyServer(function(input, output) {
     samples
   })
   
-  # Sum of box (# of ticket 1's)
+  # Avg of box (# of ticket 1's)
   output$avg_box <- renderPrint({ 
-    sum(tickets())
+    mean(tickets())
   })
   
   # SD of box
   output$sd_box <- renderPrint({
     total <- input$tickets1 + input$tickets0
     sqrt((input$tickets1 / total) * (input$tickets0 / total))
+  })
+  
+
+  # confidence
+  output$confidence <- renderPrint({
+    100 * (pnorm(input$ses) - pnorm(-input$ses))
   })
   
   # Plot with sum of draws
@@ -63,13 +69,14 @@ shinyServer(function(input, output) {
     # Render plot
     samples <- sum_draws() / input$draws
     
-    a <- samples - se_perc
-    b <- samples + se_perc
+    a <- samples - input$ses * se_perc
+    b <- samples + input$ses * se_perc
     covers <- (a <= avg_box & avg_box <= b)
     ci_cols <- rep('#ff000088', input$reps)
     ci_cols[covers] <- '#0000ff88'
     
-    xlim <- c(min(samples) - se_perc, max(samples) + se_perc)
+    xlim <- c(min(samples) - input$ses * se_perc, 
+              max(samples) + input$ses * se_perc)
     plot(samples, 1:length(samples), axes = FALSE,
          col = '#444444', pch = 21, cex = 0.5,
          xlim = c(0, 1), ylab = 'Number of samples',
@@ -78,8 +85,8 @@ shinyServer(function(input, output) {
     axis(side = 1, at = seq(0, 1, 0.1))
     axis(side = 2, las = 1)
     abline(v = avg_box, col = '#0000FFdd', lwd = 2.5)
-    segments(x0 = samples - se_perc,
-             x1 = samples + se_perc,
+    segments(x0 = a,
+             x1 = b,
              y0 = 1:length(samples),
              y1 = 1:length(samples),#col = "#555555bb"
              col = ci_cols)

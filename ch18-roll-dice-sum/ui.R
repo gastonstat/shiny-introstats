@@ -19,7 +19,7 @@ shinyUI(
       # Define the sidebar with one input
       sidebarPanel(
         numericInput("dice", label = "Number of dice:", 2, 
-                     min = 1, max = 10, step = 1),
+                     min = 1, max = 50, step = 1),
         numericInput("seed", label = "Random Seed:", 12330, 
                      min = 10000, max = 50000, step = 1),
         sliderInput("reps", label = "Number of repetitions:", 

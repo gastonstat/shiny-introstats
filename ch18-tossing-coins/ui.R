@@ -19,7 +19,7 @@ shinyUI(
         numericInput("tosses", label = "Number of tosses:", 2, 
                      min = 1, max = 100, step = 1),
         sliderInput("chance", label = "Chance of heads", 
-                    min = 0, max = 1, value = 0.5, step= 0.1)
+                    min = 0, max = 1, value = 0.5, step= 0.01)
       ),
       
       # Create a spot for the barplot

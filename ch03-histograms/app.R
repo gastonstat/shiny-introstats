@@ -9,13 +9,8 @@ nba <- read.csv('../../data/nba_players.csv', header = TRUE)
 
 # quantitative variables
 quantitative <- c(
-  "height","weight","salary","experience","age","games","games_started",
-  "minutes_played","field_goals","field_goal_attempts","field_goal_percent",
-  "points3","points3_attempts","points3_percent","points2","points2_attempts",
-  "points2_percent","effective_field_goal_percent","free_throws",
-  "free_throw_attempts","free_throw_percent","offensive_rebounds",
-  "defensive_rebounds","total_rebounds","assists","steals","blocks",
-  "turnovers","fouls","points")
+  "height","weight","salary","experience","age","games",
+  "minutes","points3","points2","points")
 
 # select just quantitative variables
 dat <- nba[ ,quantitative]

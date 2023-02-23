@@ -48,4 +48,4 @@ runApp()
 
 This work is licensed under a <a rel="license" href="https://opensource.org/licenses/BSD-2-Clause">FreeBSD License</a>.
 
-Author: [Gaston Sanchez](http://gastonsanchez.com)
+Author: [Gaston Sanchez](https://www.gastonsanchez.com)
